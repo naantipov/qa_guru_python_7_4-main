@@ -1,6 +1,7 @@
 import math
 import random
 
+
 def test_greeting():
     """
     Напишите программу, которая выводит на экран приветствие.
@@ -8,11 +9,10 @@ def test_greeting():
     name = "Анна"
     age = 25
     # TODO Сформируйте нужную строку
-    output = (f"Привет, {name}! Тебе {age} лет.")
+    output = f"Привет, {name}! Тебе {age} лет."
     print(output)
     # Проверяем результат
     assert output == "Привет, Анна! Тебе 25 лет."
-
 
 
 def test_rectangle():
@@ -24,11 +24,11 @@ def test_rectangle():
     b = 20
 
     # TODO сосчитайте периметр
-    perimeter = (2*(a+b))
+    perimeter = (2 * (a + b))
     assert perimeter == 60
 
     # TODO сосчитайте площадь
-    area = a*b
+    area = a * b
     assert area == 200
 
 
@@ -39,7 +39,7 @@ def test_circle():
     """
     r = 23
     # TODO сосчитайте площадь
-    area = (math.pi * (r*r))
+    area = (math.pi * (r * r))
     print(area)
     assert area == 1661.9025137490005
 
@@ -55,7 +55,7 @@ def test_random_list():
     """
 
     # TODO создайте список
-    l = [random.randint(1, 101) for _ in range(10)]
+    l = [random.randint(1, 100) for _ in range(10)]
     l.sort()
     assert len(l) == 10
     assert l[0] < l[-1]
@@ -86,7 +86,7 @@ def test_dicts():
     second = [1, 2, 3, 4, 5]
     # TODO создайте словарь
     d = dict(zip(first, second))
-    print(d)
+    print(d.values())
 
     assert isinstance(d, dict)
     assert len(d) == 5
